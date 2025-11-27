@@ -1,0 +1,15 @@
+.rain {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://i.imgur.com/l3P0a9D.png");
+    opacity: 0.12;
+    mix-blend-mode: screen;
+    animation: rainMove 14s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes rainMove {
+    from { transform: translateY(-200px); }
+    to { transform: translateY(200px);}
+}

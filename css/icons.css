@@ -1,0 +1,14 @@
+.icon-float {
+    position: fixed;
+    font-size: 32px;
+    opacity: 0.2;
+    animation: floatIcon 12s ease-in-out infinite;
+    z-index: 4;
+    pointer-events: none;
+}
+
+@keyframes floatIcon {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-40px) translateX(20px) rotate(6deg); }
+    100% { transform: translateY(0) translateX(0); }
+}
