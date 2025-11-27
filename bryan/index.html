@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+
+<!-- CSS BASE -->
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/aesthetic.css">
+
+<!-- EFECTOS VISUALES -->
+<link rel="stylesheet" href="css/fog.css">
+<link rel="stylesheet" href="css/particles.css">
+<link rel="stylesheet" href="css/icons.css">
+<link rel="stylesheet" href="css/butterflies.css">
+<link rel="stylesheet" href="css/rain.css">
+<link rel="stylesheet" href="css/glitch.css">
+<link rel="stylesheet" href="css/vhs.css">
+
+<!-- JS -->
+<script src="js/vhs.js" defer></script>
+<script src="js/musica.js" defer></script>
+
+
+
+<style>
+/* FONDO ANIMADO GLOBAL */
+body {
+    background: linear-gradient(-45deg, #150015, #310032, #0b0010, #150015);
+    background-size: 400% 400%;
+    animation: fondoMove 16s ease infinite;
+}
+
+@keyframes fondoMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+
+</head>
+<body>
+<div id="click-indicacion" class="indicacion">
+    ✦ Da clic en la pantalla amor✦
+</div>
+<div class="niebla"></div>
+<div class="particulas"></div>
+
+<div class="centrar">
+    <div class="caja">
+        <h2>Ingresa la clave</h2>
+        <input id="clave" type="password" placeholder="Contraseña...">
+        <br><br>
+        <button class="btn" onclick="entrar()">Entrar</button>
+        <p id="error"></p>
+    </div>
+</div>
+
+<script>
+function entrar() {
+    const clave = document.getElementById("clave").value;
+
+    const claveCorrecta = "300923";
+
+    if (clave === claveCorrecta) {
+        window.location.href = "hola.html";
+    } else {
+        document.getElementById("error").innerText = "esa no es amor AJJA";
+    }
+}
+</script>
+<audio id="musica" src="assets/lil_peep_nuts.mp3"loop></audio>
+</body>
+</html>

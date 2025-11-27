@@ -1,0 +1,21 @@
+/* ----- NIEBLA CSS (sin imágenes) ----- */
+
+.niebla {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+
+    /* niebla generada con filtros y gradientes */
+    background:
+        radial-gradient(circle at 40% 30%, rgba(255,155,189,0.18) 0%, transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(179,0,255,0.25) 0%, transparent 65%),
+        radial-gradient(circle at 30% 80%, rgba(255,155,189,0.18) 0%, transparent 70%);
+    filter: blur(35px);
+    animation: fogFlow 18s ease-in-out infinite alternate;
+}
+
+@keyframes fogFlow {
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    100% { transform: translateY(-40px) translateX(20px) scale(1.06); }
+}
